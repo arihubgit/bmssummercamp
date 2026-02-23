@@ -307,8 +307,8 @@ input[readonly] { background: #f5f0e8; color: var(--muted); }
 <!-- HERO -->
 <div class="hero">
   <span class="hero-icon">&#9728;&#65039;</span>
-  <h1><span style="font-size:1.15em;">Besant Montessori</span><br><em>Summer Camp 2026</em></h1>
-
+  <h1>Besant Montessori<br><em>Summer Camp 2026</em></h1>
+  <p class="hero-sub">Activity Enrolment &amp; Payment &middot; April 20 &ndash; June 9, 2026</p>
   <div class="badges">
     <span class="badge">&#128205; Mumbai</span>
     <span class="badge">&#128197; 20 Apr &ndash; 9 Jun 2026</span>
@@ -360,17 +360,17 @@ input[readonly] { background: #f5f0e8; color: var(--muted); }
     <div class="card-body">
       <div class="row2">
         <div class="field">
-          <label>First Name <span class="req">*</span></label>
+          <label>First Name </label>
           <input type="text" id="child_first" name="child_first" placeholder="e.g. Aanya" autocomplete="given-name">
         </div>
         <div class="field">
-          <label>Last Name <span class="req">*</span></label>
+          <label>Last Name </label>
           <input type="text" id="child_last" name="child_last" placeholder="e.g. Sharma" autocomplete="family-name">
         </div>
       </div>
       <div class="row2">
         <div class="field">
-          <label>Date of Birth <span class="req">*</span></label>
+          <label>Date of Birth </label>
           <input type="date" id="dob" name="dob" onchange="autoFillAge()">
         </div>
         <div class="field">
@@ -413,7 +413,7 @@ input[readonly] { background: #f5f0e8; color: var(--muted); }
     <div class="card-body">
       <div class="row2">
         <div class="field">
-          <label>Full Name <span class="req">*</span></label>
+          <label>Full Name </label>
           <input type="text" id="parent_name" name="parent_name" placeholder="Parent or guardian name" autocomplete="name">
         </div>
         <div class="field">
@@ -426,7 +426,7 @@ input[readonly] { background: #f5f0e8; color: var(--muted); }
       </div>
       <div class="row2">
         <div class="field">
-          <label>Mobile Number <span class="req">*</span></label>
+          <label>Mobile Number </label>
           <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" oninput="onPhoneInput()">
         </div>
         <div class="field">
@@ -439,7 +439,7 @@ input[readonly] { background: #f5f0e8; color: var(--muted); }
         <label for="sameAsPhone">WhatsApp is same as mobile number</label>
       </div>
       <div class="field">
-        <label>Email Address <span class="req">*</span></label>
+        <label>Email Address </label>
         <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
       </div>
       <div class="field">
@@ -724,13 +724,13 @@ input[readonly] { background: #f5f0e8; color: var(--muted); }
     </div>
     <div class="ty-contact">
       &#128222; <strong>Questions?</strong> Contact <strong>Mr. Uzair</strong><br>
-      <a href="tel:+919137911172">+91-91379 11172</a> &nbsp;&nbsp; &#128231; <a href="/cdn-cgi/l/email-protection#0765627466697374726a6a627564666a7747606a666e6b2964686a"><span class="__cf_email__" data-cfemail="e1838492808f9592948c8c849382808c91a1868c80888dcf828e8c">[email&#160;protected]</span></a>
+      <a href="tel:+919137911172">+91-91379 11172</a> &nbsp;&nbsp; &#128231; <a href="mailto:besantsummercamp@gmail.com">besantsummercamp@gmail.com</a>
     </div>
     <p style="text-align:center;font-size:11.5px;color:#9a8a72;padding:20px 0 40px;">Besant Montessori Summer Camp 2026 &middot; Mumbai</p>
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (function () {
   "use strict";
 
@@ -1160,4 +1160,17 @@ input[readonly] { background: #f5f0e8; color: var(--muted); }
   }
 
   
-  /* ── UTILITY ────────────────────────────────
+  /* ── UTILITY ─────────────────────────────────────────── */
+  function esc(s) {
+    if (!s) return "";
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+})();
+</script>
+</body>
+</html>
